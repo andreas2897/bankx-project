@@ -1,0 +1,5 @@
+com\bankx\account\AccountServiceApplication.class
+com\bankx\account\controller\AccountController.class
+com\bankx\account\model\Account.class
+com\bankx\account\service\AccountService.class
+com\bankx\account\repository\AccountRepository.class

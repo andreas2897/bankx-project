@@ -1,0 +1,7 @@
+com\bankx\transfer\repository\TransferRepository.class
+com\bankx\transfer\controller\TransferController.class
+com\bankx\transfer\model\Transfer.class
+com\bankx\transfer\model\RemoteAccountDto.class
+com\bankx\transfer\TransferServiceApplication.class
+com\bankx\transfer\feign\AccountClient.class
+com\bankx\transfer\service\TransferService.class

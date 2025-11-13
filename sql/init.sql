@@ -1,0 +1,24 @@
+CREATE DATABASE IF NOT EXISTS bankx;
+USE bankx;
+
+CREATE TABLE IF NOT EXISTS accounts (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  account_number VARCHAR(50) NOT NULL UNIQUE,
+  name VARCHAR(100) NOT NULL,
+  balance DECIMAL(19,4) NOT NULL DEFAULT 0.0,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS transfers (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  from_account VARCHAR(50) NOT NULL,
+  to_account VARCHAR(50) NOT NULL,
+  amount DECIMAL(19,4) NOT NULL,
+  timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- seed sample accounts
+INSERT IGNORE INTO accounts (account_number, name, balance) VALUES
+('ACC1001', 'Alice', 10000.00),
+('ACC1002', 'Bob', 5000.00),
+('ACC1003', 'Carol', 7500.00);
