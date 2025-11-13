@@ -23,4 +23,9 @@ Java 21, Spring Boot 3, MySQL, Docker, Docker Compose
 - POST /transfers?from=...&to=...&amount=... (transfer-service)
 - GET /transfers/recent/{acc} (transfer-service)
 
+4.Curl List:
+- curl --location 'http://localhost:8081/accounts/ACC1001'
+- curl --location --request POST 'http://localhost:8082/transfers?from=ACC1001&to=ACC1002&amount=1000'
+- curl --location 'http://localhost:8082/transfers/recent/ACC1001'
+
 Notes: You need Docker and Maven installed. The project uses Java 21 and Spring Boot 3.
